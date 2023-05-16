@@ -1,0 +1,73 @@
+SET SERVEROUTPUT ON 
+DECLARE
+Myname VARCHAR2(20):= 'John';  
+BEGIN
+Myname := 'Steven';
+DBMS_OUTPUT.PUT_LINE('My name is: '||Myname); 
+END;
+/
+
+VARIABLE emp_salary NUMBER 
+BEGIN
+SELECT salary	
+INTO :emp_salary
+FROM	employees WHERE employee_id = 178;  
+END;
+/
+PRINT emp_salary
+SELECT first_name, last_name 
+FROM employees  
+WHERE salary=:emp_salary;
+
+--bind variable with autopring
+SET SERVEROUTPUT ON 
+variable emp_salary VARCHAR(20);
+set autoprint on
+begin
+select salary into:emp_salary from hr.employees where employee_id = 121;
+end;
+/
+
+Variable emp_salary number
+begin
+select salary into:emp_salary from hr.employees where employee_id = 123;
+end;
+/
+print emp_salary
+select first_name, last_name from hr.employees
+where salary = :emp_salary;
+
+--user input  / substitution varianle
+VARIABLE emp_salary NUMBER  
+SET AUTOPRINT ON
+DECLARE
+empno NUMBER(6):=&empno; 
+BEGIN
+SELECT salary	INTO :emp_salary
+FROM	employees WHERE employee_id = empno;  END;
+/
+
+set verify off
+variable emp_sal number
+Accept emp_id  prompt 'Enter the employee id:'
+set autoprint on
+declare 
+emp_id number(9,2) := &emp_id;
+begin 
+select salary into :emp_sal from hr.employees where employee_id = emp_id; 
+end;
+/
+
+SET VERIFY OFF
+DEFINE lname = Urman
+DECLARE
+fname VARCHAR2(255);
+BEGIN
+SELECT first_name
+INTO fname 
+FROM hr.employees
+WHERE last_name = '&lname';
+dbms_output.put_line('first name: ' || fname);
+END;
+/
+--select first_name , last_name from hr.employees;

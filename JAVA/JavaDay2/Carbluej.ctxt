@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Carbluej
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Carbluej\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ broom()
+comment10.params=year
+comment10.target=void\ setyear(int)
+comment11.params=brand\ model\ color\ year
+comment11.target=void\ setcar(java.lang.String,\ java.lang.String,\ java.lang.String,\ int)
+comment2.params=
+comment2.target=void\ getcar()
+comment3.params=
+comment3.target=java.lang.String\ getbrand()
+comment4.params=
+comment4.target=java.lang.String\ getmodel()
+comment5.params=
+comment5.target=java.lang.String\ getcolor()
+comment6.params=
+comment6.target=int\ getyear()
+comment7.params=brand
+comment7.target=void\ setbrand(java.lang.String)
+comment8.params=model
+comment8.target=void\ setmodel(java.lang.String)
+comment9.params=color
+comment9.target=void\ setcolor(java.lang.String)
+numComments=12
